@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86_64,x86"
+    api-level="23"
+    density="hdpi"
+    format="7"
+    timestamp="53648413329889" >
+
+    <task
+        name="javac"
+        duration="0" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="0" />
+    <task
+        name="verifier"
+        duration="0" />
+
+    <artifact
+        location="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
+
+    <build timestamp="52831148569179" >
+        <artifact
+            location="/home/chen/AndroidStudioProjects/file_demo/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="53648413329889" >
+        <artifact
+            location="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
+    </build>
+
+</instant-run>
