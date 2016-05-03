@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/chen/AndroidStudioProjects/file_demo/app/src/main/assets"/></dataSet><dataSet config="debug"><source path="/home/chen/AndroidStudioProjects/file_demo/app/src/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="unspecified"><source path="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/assets"/></dataSet><dataSet config="main"><source path="/home/chen/AndroidStudioProjects/file_demo/app/src/main/assets"/></dataSet><dataSet config="debug"><source path="/home/chen/AndroidStudioProjects/file_demo/app/src/debug/assets"/></dataSet></merger>

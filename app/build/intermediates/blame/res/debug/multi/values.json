@@ -150,8 +150,122 @@
                     "startLine": 36,
                     "startColumn": 4,
                     "startOffset": 987,
+                    "endColumn": 35,
+                    "endOffset": 1018
+                },
+                "from": {
+                    "file": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 35,
+                        "endOffset": 86
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 1023,
+                    "endColumn": 42,
+                    "endOffset": 1061
+                },
+                "from": {
+                    "file": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 91,
+                        "endColumn": 42,
+                        "endOffset": 129
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 1066,
+                    "endColumn": 45,
+                    "endOffset": 1107
+                },
+                "from": {
+                    "file": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 134,
+                        "endColumn": 45,
+                        "endOffset": 175
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 1112,
+                    "endColumn": 33,
+                    "endOffset": 1141
+                },
+                "from": {
+                    "file": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 180,
+                        "endColumn": 33,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 1146,
                     "endColumn": 44,
-                    "endOffset": 1027
+                    "endOffset": 1186
+                },
+                "from": {
+                    "file": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 44,
+                        "endOffset": 254
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 1191,
+                    "endColumn": 47,
+                    "endOffset": 1234
+                },
+                "from": {
+                    "file": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 259,
+                        "endColumn": 47,
+                        "endOffset": 302
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 1239,
+                    "endColumn": 44,
+                    "endOffset": 1279
                 },
                 "from": {
                     "file": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/values/strings.xml",
@@ -166,11 +280,11 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 1032,
+                    "startOffset": 1284,
                     "endColumn": 45,
-                    "endOffset": 1073
+                    "endOffset": 1325
                 },
                 "from": {
                     "file": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/values/strings.xml",
@@ -185,11 +299,11 @@
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 1078,
+                    "startOffset": 1330,
                     "endColumn": 52,
-                    "endOffset": 1126
+                    "endOffset": 1378
                 },
                 "from": {
                     "file": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/values/strings.xml",
@@ -204,12 +318,12 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 1131,
-                    "endLine": 45,
+                    "startOffset": 1383,
+                    "endLine": 51,
                     "endColumn": 12,
-                    "endOffset": 1417
+                    "endOffset": 1669
                 },
                 "from": {
                     "file": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/values/styles.xml",
@@ -225,12 +339,12 @@
             },
             {
                 "to": {
-                    "startLine": 46,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 1422,
-                    "endLine": 48,
+                    "startOffset": 1674,
+                    "endLine": 54,
                     "endColumn": 12,
-                    "endOffset": 1577
+                    "endOffset": 1829
                 },
                 "from": {
                     "file": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/values/styles.xml",

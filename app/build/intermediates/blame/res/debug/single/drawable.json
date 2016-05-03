@@ -32,12 +32,12 @@
         "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/drawable/unselected.png"
     },
     {
-        "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/drawable/paste.png",
-        "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/drawable/paste.png"
-    },
-    {
         "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/drawable/uponelevel.png",
         "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/drawable/uponelevel.png"
+    },
+    {
+        "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/drawable/paste.png",
+        "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/drawable/paste.png"
     },
     {
         "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/drawable/delete.png",

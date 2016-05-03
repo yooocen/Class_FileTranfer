@@ -2,25 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/home/chen/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/jars/libs/zxing.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_e993b0a0cae5086cfb23652f48cda69e8980cd2a/classes.dex" />
+        sha1="18b9a0122479e5439280d728c43216d9e85f2d9d">
+        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/8/zxing_bb016dceb0d416178c5f3e130ae66d2bf34baab7/classes.dex" />
     </item>
     <item
         jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="fe58ef9261f3ef82d135d075fc92cb69fc2be6e9">
+        sha1="8ecf039edb85ec3797e564ce461f74dc0e9cc22b">
         <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_13a1ec1949a914a545cdd08880ad5bb33da442b4/classes.dex" />
     </item>
     <item
         jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="fe23c5af6096e0180d4fef4cf790cb104b6fbccb">
+        sha1="75b400dceef67838708dc1263dd2c2f70fcb75fa">
         <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_35e1d1b0aae5b8e356d380fcc7e4e84df7167171/classes.dex" />
+    </item>
+    <item
+        jar="/home/chen/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_e993b0a0cae5086cfb23652f48cda69e8980cd2a/classes.dex" />
     </item>
 
 </items>

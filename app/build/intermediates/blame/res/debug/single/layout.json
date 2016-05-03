@@ -8,8 +8,20 @@
         "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/layout/rename.xml"
     },
     {
+        "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/layout/qrdialog.xml",
+        "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/layout/qrdialog.xml"
+    },
+    {
         "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/layout/dialog.xml",
         "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/layout/dialog.xml"
+    },
+    {
+        "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/layout/activity_capture.xml",
+        "source": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/res/layout/activity_capture.xml"
+    },
+    {
+        "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/layout/dialog2.xml",
+        "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/layout/dialog2.xml"
     },
     {
         "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/layout/file_view.xml",

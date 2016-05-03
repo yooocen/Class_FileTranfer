@@ -34,6 +34,12 @@
     </array>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
     <string name="app_name">《文件管理器》</string>
     <string name="current_dir">.(刷新)</string>
     <string name="up_one_level">..(返回上一级目录)</string>

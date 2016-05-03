@@ -18,29 +18,76 @@
             android:layout_height="wrap_content"
             android:layout_width="fill_parent">
             <!--第一个页面-->
-            <LinearLayout
+            <RelativeLayout
+                android:layout_marginTop="20dp"
                 android:id="@+id/LinearLayout001"
-                android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-                <TextView
-                    android:id="@+id/TextView1"
-                    android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/QR"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="二维码"/>
+
+                    <Button
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="扫一扫"
+                        android:id="@+id/connect" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="第一个页面"/>
-                <Button
-                    android:id="@+id/btnVisiable"
-                    android:text="发送"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"/>
-                <Button
-                    android:id="@+id/btnStrip"
-                    android:layout_width="fill_parent"
+                    android:layout_marginTop="50dp">
+                    <Button
+                        android:id="@+id/open"
+                        android:text="开启热点"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"/>
+                    <Button
+                        android:id="@+id/close"
+                        android:text="关闭热点"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="接收"/>
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="0dp"
+                    >
+                    <ImageView
+                        android:layout_marginLeft="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wifiImage"
+                        android:layout_marginTop="60dp"/>
+                </LinearLayout>
 
 
-            </LinearLayout>
+
+                <Button
+                    android:layout_marginTop="330dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="80dp"
+                    android:id="@+id/transfer"
+                    android:text="开始传送"/>
+
+
+
+            </RelativeLayout>
             <!--第二个页面-->
             <LinearLayout
                 android:id="@+id/LinearLayout002"
@@ -68,22 +115,7 @@
 
             </LinearLayout>
             
-            
-            
-            
-            
-            
-            <!--第三个页面-->
-            <!--<LinearLayout-->
-                <!--android:id="@+id/LinearLayout003"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent">-->
-                <!--<TextView-->
-                    <!--android:id="@+id/TextView3"-->
-                    <!--android:layout_width="fill_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="第三个个页面"/>-->
-            <!--</LinearLayout>-->
+
         </FrameLayout>
     </LinearLayout>
 </TabHost>

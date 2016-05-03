@@ -9,17 +9,17 @@ package com.whangyx.whang_file;
 
 public final class R {
     public static final class array {
-        public static final int fileEndingAudio=0x7f060000;
-        public static final int fileEndingImage=0x7f060001;
-        public static final int fileEndingPackage=0x7f060002;
-        public static final int fileEndingVideo=0x7f060003;
-        public static final int fileEndingWebText=0x7f060004;
+        public static final int fileEndingAudio=0x7f070000;
+        public static final int fileEndingImage=0x7f070001;
+        public static final int fileEndingPackage=0x7f070002;
+        public static final int fileEndingVideo=0x7f070003;
+        public static final int fileEndingWebText=0x7f070004;
     }
     public static final class attr {
     }
     public static final class dimen {
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int addfolderr=0x7f020000;
@@ -33,45 +33,72 @@ public final class R {
         public static final int image=0x7f020008;
         public static final int packed=0x7f020009;
         public static final int paste=0x7f02000a;
-        public static final int text=0x7f02000b;
-        public static final int unselected=0x7f02000c;
-        public static final int uponelevel=0x7f02000d;
-        public static final int video=0x7f02000e;
-        public static final int webtext=0x7f02000f;
+        public static final int qr_code_bg=0x7f02000b;
+        public static final int scan_line=0x7f02000c;
+        public static final int shadow=0x7f02000d;
+        public static final int text=0x7f02000e;
+        public static final int unselected=0x7f02000f;
+        public static final int uponelevel=0x7f020010;
+        public static final int video=0x7f020011;
+        public static final int webtext=0x7f020012;
     }
     public static final class id {
-        public static final int EditText01=0x7f08000b;
-        public static final int EditText_PROM=0x7f080001;
-        public static final int LinearLayout001=0x7f08000c;
-        public static final int LinearLayout002=0x7f080010;
-        public static final int TextView01=0x7f08000a;
-        public static final int TextView1=0x7f08000d;
-        public static final int TextView2=0x7f080011;
-        public static final int TextView_PROM=0x7f080000;
-        public static final int btnSend=0x7f080003;
-        public static final int btnStrip=0x7f08000f;
-        public static final int btnVisiable=0x7f08000e;
-        public static final int btnfilemanager=0x7f080012;
-        public static final int btnreceived=0x7f080013;
-        public static final int fileView=0x7f080002;
-        public static final int file_name=0x7f080006;
-        public static final int file_parent=0x7f080009;
-        public static final int file_path=0x7f080007;
-        public static final int file_type=0x7f080008;
-        public static final int image=0x7f080004;
-        public static final int select=0x7f080005;
+        public static final int EditText01=0x7f08001b;
+        public static final int EditText_PROM=0x7f08000f;
+        public static final int LinearLayout001=0x7f08001c;
+        public static final int LinearLayout002=0x7f080022;
+        public static final int QR=0x7f08001d;
+        public static final int TextView01=0x7f08001a;
+        public static final int TextView2=0x7f080023;
+        public static final int TextView_PROM=0x7f08000e;
+        public static final int btnSend=0x7f080013;
+        public static final int btnfilemanager=0x7f080024;
+        public static final int btnreceived=0x7f080025;
+        public static final int capture_container=0x7f080007;
+        public static final int capture_crop_view=0x7f080009;
+        public static final int capture_mask_bottom=0x7f08000b;
+        public static final int capture_mask_left=0x7f08000c;
+        public static final int capture_mask_right=0x7f08000d;
+        public static final int capture_mask_top=0x7f080008;
+        public static final int capture_preview=0x7f080006;
+        public static final int capture_scan_line=0x7f08000a;
+        public static final int close=0x7f080020;
+        public static final int connect=0x7f08001e;
+        public static final int decode=0x7f080000;
+        public static final int decode_failed=0x7f080001;
+        public static final int decode_succeeded=0x7f080002;
+        public static final int fileView=0x7f080012;
+        public static final int file_name=0x7f080016;
+        public static final int file_parent=0x7f080019;
+        public static final int file_path=0x7f080017;
+        public static final int file_type=0x7f080018;
+        public static final int image=0x7f080014;
+        public static final int open=0x7f08001f;
+        public static final int quit=0x7f080003;
+        public static final int restart_preview=0x7f080004;
+        public static final int return_scan_result=0x7f080005;
+        public static final int select=0x7f080015;
+        public static final int transfer=0x7f080021;
+        public static final int tv_content1=0x7f080011;
+        public static final int wifiImage=0x7f080010;
     }
     public static final class layout {
-        public static final int dialog=0x7f030000;
-        public static final int file_view=0x7f030001;
-        public static final int item_view=0x7f030002;
-        public static final int rename=0x7f030003;
-        public static final int tab=0x7f030004;
+        public static final int activity_capture=0x7f030000;
+        public static final int dialog=0x7f030001;
+        public static final int dialog2=0x7f030002;
+        public static final int file_view=0x7f030003;
+        public static final int item_view=0x7f030004;
+        public static final int qrdialog=0x7f030005;
+        public static final int rename=0x7f030006;
+        public static final int tab=0x7f030007;
+    }
+    public static final class raw {
+        public static final int beep=0x7f040000;
     }
     public static final class string {
-        public static final int app_name=0x7f070000;
-        public static final int current_dir=0x7f070001;
-        public static final int up_one_level=0x7f070002;
+        public static final int app_name=0x7f090000;
+        public static final int current_dir=0x7f090001;
+        public static final int up_one_level=0x7f090002;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
@@ -82,9 +109,9 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f060001;
     }
 }

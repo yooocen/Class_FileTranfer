@@ -83,7 +83,7 @@ public class FilesViewActivity extends Activity {
 				Intent intent = new Intent();
 				intent.putStringArrayListExtra("fileName", fileName);
 				intent.putStringArrayListExtra("safeFileName", safeFileName);
-				setResult(RESULT_OK, intent);
+				setResult(6, intent);//留意这里!!!!!
 				finish();
 			}
 		});
