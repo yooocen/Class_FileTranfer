@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/home/chen/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_e993b0a0cae5086cfb23652f48cda69e8980cd2a/classes.dex" />
+    </item>
+    <item
         jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/jars/libs/zxing.jar"
         jumboMode="true"
         revision="23.0.3"
@@ -12,22 +19,15 @@
         jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="8ecf039edb85ec3797e564ce461f74dc0e9cc22b">
+        sha1="867a3228263507900f7aa7267ca781139f0899d6">
         <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_13a1ec1949a914a545cdd08880ad5bb33da442b4/classes.dex" />
     </item>
     <item
         jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="75b400dceef67838708dc1263dd2c2f70fcb75fa">
+        sha1="580225b6b21da7547a1a68c34999c9fa0a14254f">
         <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_35e1d1b0aae5b8e356d380fcc7e4e84df7167171/classes.dex" />
-    </item>
-    <item
-        jar="/home/chen/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_e993b0a0cae5086cfb23652f48cda69e8980cd2a/classes.dex" />
     </item>
 
 </items>

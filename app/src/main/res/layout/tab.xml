@@ -65,6 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:layout_marginLeft="0dp"
+                    android:orientation="vertical"
                     >
                     <ImageView
                         android:layout_marginLeft="0dp"
@@ -72,6 +73,16 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/wifiImage"
                         android:layout_marginTop="60dp"/>
+                    <EditText
+                        android:editable="false"
+                        android:text="呦呦呦"
+                        android:ems="100"
+                        android:id="@+id/info"
+                        android:layout_marginTop="160dp"
+                        android:layout_width="255dp"
+                        android:layout_gravity="center_vertical|left|top"
+                        android:layout_height="match_parent" />
+
                 </LinearLayout>
 
 
@@ -84,7 +95,6 @@
                     android:layout_marginLeft="80dp"
                     android:id="@+id/transfer"
                     android:text="开始传送"/>
-
 
 
             </RelativeLayout>

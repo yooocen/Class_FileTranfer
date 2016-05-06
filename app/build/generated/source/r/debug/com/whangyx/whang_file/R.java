@@ -35,25 +35,26 @@ public final class R {
         public static final int paste=0x7f02000a;
         public static final int qr_code_bg=0x7f02000b;
         public static final int scan_line=0x7f02000c;
-        public static final int shadow=0x7f02000d;
-        public static final int text=0x7f02000e;
-        public static final int unselected=0x7f02000f;
-        public static final int uponelevel=0x7f020010;
-        public static final int video=0x7f020011;
-        public static final int webtext=0x7f020012;
+        public static final int selected=0x7f02000d;
+        public static final int shadow=0x7f02000e;
+        public static final int text=0x7f02000f;
+        public static final int unselected=0x7f020010;
+        public static final int uponelevel=0x7f020011;
+        public static final int video=0x7f020012;
+        public static final int webtext=0x7f020013;
     }
     public static final class id {
         public static final int EditText01=0x7f08001b;
         public static final int EditText_PROM=0x7f08000f;
         public static final int LinearLayout001=0x7f08001c;
-        public static final int LinearLayout002=0x7f080022;
+        public static final int LinearLayout002=0x7f080023;
         public static final int QR=0x7f08001d;
         public static final int TextView01=0x7f08001a;
-        public static final int TextView2=0x7f080023;
+        public static final int TextView2=0x7f080024;
         public static final int TextView_PROM=0x7f08000e;
         public static final int btnSend=0x7f080013;
-        public static final int btnfilemanager=0x7f080024;
-        public static final int btnreceived=0x7f080025;
+        public static final int btnfilemanager=0x7f080025;
+        public static final int btnreceived=0x7f080026;
         public static final int capture_container=0x7f080007;
         public static final int capture_crop_view=0x7f080009;
         public static final int capture_mask_bottom=0x7f08000b;
@@ -73,12 +74,13 @@ public final class R {
         public static final int file_path=0x7f080017;
         public static final int file_type=0x7f080018;
         public static final int image=0x7f080014;
+        public static final int info=0x7f080021;
         public static final int open=0x7f08001f;
         public static final int quit=0x7f080003;
         public static final int restart_preview=0x7f080004;
         public static final int return_scan_result=0x7f080005;
         public static final int select=0x7f080015;
-        public static final int transfer=0x7f080021;
+        public static final int transfer=0x7f080022;
         public static final int tv_content1=0x7f080011;
         public static final int wifiImage=0x7f080010;
     }

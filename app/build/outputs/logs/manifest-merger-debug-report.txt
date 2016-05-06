@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:4:5-37
 		INJECTED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml
@@ -48,49 +48,53 @@ uses-permission#android.permission.CHANGE_WIFI_STATE
 ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:15:5-75
 	android:name
 		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:15:22-73
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:17:5-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:17:5-67
 	android:name
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:17:22-76
-uses-permission#android.permission.CHANGE_NETWORK_STATE
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:17:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:18:5-78
 	android:name
 		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:18:22-76
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:19:22-76
 application
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:20:5-37:19
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:21:5-38:19
 MERGED from [file_demo:libzxing:unspecified] /home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/AndroidManifest.xml:14:5-18:19
 	android:label
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:23:9-41
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:24:9-41
 	android:allowBackup
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:22:9-35
 	android:icon
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:22:9-45
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:23:9-45
 	android:theme
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:24:9-40
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:25:9-40
 activity#com.whangyx.whang_file.MainActivity
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:25:9-33:20
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:26:9-34:20
 	android:label
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:27:13-45
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:28:13-45
 	android:name
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:26:13-63
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:27:13-63
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:28:13-32:29
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:29:17-69
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:29:25-66
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:31:17-77
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:31:27-74
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:32:27-74
 activity#com.whangyx.whang_file.FileManager
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:35:9-58
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:36:9-58
 	android:name
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:35:19-46
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:36:19-46
 activity#com.whangyx.whang_file.FilesViewActivity
-ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:36:9-64
+ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:37:9-64
 	android:name
-		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:36:19-52
+		ADDED from /home/chen/AndroidStudioProjects/file_demo/app/src/main/AndroidManifest.xml:37:19-52
 uses-permission#android.permission.CAMERA
 ADDED from [file_demo:libzxing:unspecified] /home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/AndroidManifest.xml:11:5-65
 	android:name

@@ -67,7 +67,7 @@ public class FilesViewActivity extends Activity {
 						fileName.remove(name.getText().toString());
 						safeFileName.remove(path.getText().toString());
 					}else{
-						select.setImageResource(R.drawable.unselected);
+						select.setImageResource(R.drawable.selected);
 						select.setTag(1);
 						fileName.add(name.getText().toString());
 						safeFileName.add(path.getText().toString());
