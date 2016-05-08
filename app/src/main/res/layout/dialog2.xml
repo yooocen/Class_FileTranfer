@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	>
+
+	<!-- 整个布局为线性布局，让最上面的图片、账户框、密码框平分上半部分，最下面的按钮独占一部分 -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="256dp"
+		android:layout_gravity="center"
+		android:orientation="vertical"
+		android:background="#fff"
+		>
+
+		<!-- 最上面的提示图片 -->
+		<ImageView
+			android:id="@+id/wifiImage"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			android:layout_marginLeft="20dp"
+			android:layout_weight="1"
+			/>
+
+	</LinearLayout>
+
+	<!-- 蓝色的线条 -->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="#2E9AFE"
+		/>
+
+	<!-- 以下部分为确定和取消的两个按钮 -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:layout_gravity="center"
+		android:orientation="horizontal"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"
+		android:background="#fff">
+
+		<!-- 另一个颜色值 #a8bbc6-->
+		<View
+			android:layout_width="1dp"
+			android:layout_height="55dp"
+			android:background="#fff"
+			android:layout_weight="1"
+			/>
+		<Button
+			android:id="@+id/tv_content1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textColor="#2E9AFE"
+			android:textSize="22sp"
+			android:layout_gravity="center"
+			android:layout_weight="1"
+			/>
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="55dp"
+			android:background="#fff"
+			android:layout_weight="1"
+			/>
+	</LinearLayout>
+
+</LinearLayout>
