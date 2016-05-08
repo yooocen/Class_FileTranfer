@@ -26,6 +26,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.Toast;
@@ -44,6 +45,8 @@ public class MainActivity extends Activity {
     public static final int NETTYPE_WIFI = 0x01;
     public static final int NETTYPE_CMWAP = 0x02;
     public static final int NETTYPE_CMNET = 0x03;
+    //进度条
+    private ProgressBar process; //= (ProgressBar)findViewById(R.id.process);你不能这样写的,xml在onCreate那里设置的,你都还没设置
     //传输用
     private EditText info;
 
@@ -72,6 +75,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab);
+        process = (ProgressBar)findViewById(R.id.process);
         openNcloseWifi();
         //以下是分栏显示的
         mTabHost = (TabHost) findViewById(android.R.id.tabhost);
@@ -91,6 +95,13 @@ public class MainActivity extends Activity {
                     case 0:
                         SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss");//SimpleDateFormat 是一个以国别敏感的方式格式化和分析数据的具体类
                         info.append("\n[" + format.format(new Date()) + "]" + msg.obj.toString());//[日期]正在发送至
+                        if(msg.obj.toString().contains("接收完成")) {
+                            process.incrementProgressBy(100);
+                        }
+                        else process.incrementProgressBy(20);
+                        if(msg.obj.toString().contains("发送完成"))
+                            process.incrementProgressBy(100);
+                        else process.incrementProgressBy(20);
                         break;
                     case 1:
                         getport = msg.obj.toString();
@@ -245,6 +256,7 @@ public class MainActivity extends Activity {
                 final String ipAddress0 = ipAddress;//ip地址
                 final int port0 = port;//端口号
                 Message.obtain(handler, 0, "正在发送至" + ipAddress + ":" +  port).sendToTarget();//sendToTarget方法,把这条消息发到被getTarget()指定的handler, obtain设置目标值和对象成员,生成这条消息
+                process.incrementProgressBy(20);
                 Thread sendThread = new Thread(new Runnable() {
                     @Override
                     public void run() {

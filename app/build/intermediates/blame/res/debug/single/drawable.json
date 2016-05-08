@@ -24,12 +24,12 @@
         "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/drawable/icon.png"
     },
     {
-        "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/drawable/video.png",
-        "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/drawable/video.png"
-    },
-    {
         "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/drawable/text.png",
         "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/drawable/text.png"
+    },
+    {
+        "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/drawable/video.png",
+        "source": "/home/chen/AndroidStudioProjects/file_demo/app/src/main/res/drawable/video.png"
     },
     {
         "merged": "/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/res/merged/debug/drawable/unselected.png",

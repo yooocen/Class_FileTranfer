@@ -18,13 +18,20 @@
             android:layout_height="wrap_content"
             android:layout_width="fill_parent">
             <!--第一个页面-->
-            <RelativeLayout
-                android:layout_marginTop="20dp"
+            <LinearLayout
                 android:id="@+id/LinearLayout001"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:gravity="center_horizontal">
+                android:orientation="vertical"
+                >
+                <ProgressBar
+                    android:max="100"
+                    android:id="@+id/process"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
                 <LinearLayout
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
@@ -44,9 +51,10 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp">
+                    >
                     <Button
                         android:id="@+id/open"
                         android:text="开启热点"
@@ -60,44 +68,37 @@
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginLeft="0dp"
-                    android:orientation="vertical"
-                    >
+
                     <ImageView
                         android:layout_marginLeft="0dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/wifiImage"
-                        android:layout_marginTop="60dp"/>
+                        android:src="@drawable/audio"
+                        />
                     <EditText
                         android:editable="false"
                         android:text="呦呦呦"
                         android:ems="100"
                         android:id="@+id/info"
-                        android:layout_marginTop="160dp"
+                        android:layout_marginTop="120dp"
                         android:layout_width="255dp"
-                        android:layout_gravity="center_vertical|left|top"
+                        android:layout_gravity="center"
                         android:layout_height="match_parent" />
 
-                </LinearLayout>
 
 
 
                 <Button
-                    android:layout_marginTop="330dp"
+                    android:layout_marginTop="40dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="80dp"
                     android:id="@+id/transfer"
                     android:text="开始传送"/>
 
 
-            </RelativeLayout>
+            </LinearLayout>
             <!--第二个页面-->
             <LinearLayout
                 android:id="@+id/LinearLayout002"
