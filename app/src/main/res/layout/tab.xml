@@ -68,37 +68,42 @@
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
-
-                    <ImageView
-                        android:layout_marginLeft="0dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/wifiImage"
-                        android:src="@drawable/audio"
-                        />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--<ImageView-->
+                        <!--android:layout_marginLeft="0dp"-->
+                        <!--android:layout_width="125dp"-->
+                        <!--android:layout_height="125dp"-->
+                        <!--android:id="@+id/wifiImage"-->
+                        <!--android:src="@drawable/audio"-->
+                        <!--/>-->
                     <EditText
+                        android:background="@drawable/while_backgroud"
                         android:editable="false"
                         android:text="呦呦呦"
                         android:ems="100"
                         android:id="@+id/info"
-                        android:layout_marginTop="120dp"
-                        android:layout_width="255dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
+                        />
+
+                    <Button
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_height="match_parent" />
-
-
-
-
-                <Button
-                    android:layout_marginTop="40dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/transfer"
-                    android:text="开始传送"/>
-
+                        android:id="@+id/transfer"
+                        android:text="开始传送"/>
+                </RelativeLayout>
 
             </LinearLayout>
+
             <!--第二个页面-->
             <LinearLayout
                 android:id="@+id/LinearLayout002"
