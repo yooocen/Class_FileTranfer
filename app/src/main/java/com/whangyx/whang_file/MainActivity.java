@@ -75,6 +75,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab);
+        //进度条
         process = (ProgressBar)findViewById(R.id.process);
         openNcloseWifi();
         //以下是分栏显示的
@@ -131,6 +132,7 @@ public class MainActivity extends Activity {
         QR.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 //首先获取本机的ip地址和端口port
                 String ipAddress1 = GetIpAddress();
                 String port1 = getport;//getport;
@@ -138,7 +140,8 @@ public class MainActivity extends Activity {
                 String information= ipAddress1+"\n"+port1;
 
                 qrCodeBitmap = EncodingUtils.createQRCode(information, 250, 250, null);
-                wifiImage.setImageBitmap(qrCodeBitmap);//在这里画图
+//                wifiImage.setImageBitmap(qrCodeBitmap);//在这里画图
+                showAlertDialog(qrCodeBitmap);
 
 
             }
@@ -175,11 +178,12 @@ public class MainActivity extends Activity {
                     String transport = wifiSSID + "\n" + wifiPwd;
                     wifiHotspot.startWifiAp(wifiSSID,wifiPwd);
                     qrCodeBitmap = EncodingUtils.createQRCode(transport, 250, 250, null);
-
-                    wifiImage.setImageBitmap(qrCodeBitmap);//在这里画图
+                    showAlertDialog(qrCodeBitmap);
+//                    wifiImage.setImageBitmap(qrCodeBitmap);//在这里画图
                 }
                 else if (wifiHotspot.isWifiApEnabled()){
-                    Toast.makeText(MainActivity.this,"Wifi热点已开启",Toast.LENGTH_LONG).show();
+//                    Toast.makeText(MainActivity.this,"Wifi热点已开启",Toast.LENGTH_LONG).show();
+                    showAlertDialog(qrCodeBitmap);
                 }
             }
         });
@@ -190,7 +194,7 @@ public class MainActivity extends Activity {
                 GetIpAddress();
 
                 wifiHotspot.closeWifiAp();
-                wifiImage.setImageBitmap(null);
+//                wifiImage.setImageBitmap(null);
             }
         });
         connect.setOnClickListener(new View.OnClickListener() {
@@ -226,17 +230,16 @@ public class MainActivity extends Activity {
         if (resultCode == RESULT_OK && requestCode == 0) {  //扫一扫那个按键
             Bundle bundle = data.getExtras();//获取扫描到的信息
             String scanResult = bundle.getString("result");
-            String firstChar,secondChar;
+            String firstChar, secondChar;
             splitResult = scanResult.split("\n");//将扫描到的信息通过换行符分开
 
-            firstChar=splitResult[0];
-            secondChar=splitResult[1];
-            if(firstChar.contains(".")){
+            firstChar = splitResult[0];
+            secondChar = splitResult[1];
+            if (firstChar.contains(".")) {
                 ipAddress = firstChar;//通过二维码扫描获取ip地址
                 port = Integer.parseInt(secondChar);//!!!!
                 Log.e("tag", "ip地址：" + ipAddress + "\n" + "监听端口：" + port);
-            }
-            else{
+            } else {
                 String wifiSSID = firstChar;
                 String wifiPwd = secondChar;
                 Log.e("tag", "账号：" + wifiSSID + "\n" + "密码：" + wifiPwd);
@@ -245,61 +248,56 @@ public class MainActivity extends Activity {
                 connectToWifi.openWifi();
 
                 connectToWifi.addNetwork(connectToWifi.CreateWifiInfo(wifiSSID, wifiPwd, 3));
-                Log.i("tag","呦呦呦!");
+                Log.i("tag", "呦呦呦!");
             }
 
         }
         //点击发送按钮之后的反馈
-            if (resultCode == 6 && requestCode == 1) {  //发送按键transfer
-                final ArrayList<String> fileName = data.getStringArrayListExtra("fileName");//文件名
-                final ArrayList<String> safeFileName = data.getStringArrayListExtra("safeFileName");
-                final String ipAddress0 = ipAddress;//ip地址
-                final int port0 = port;//端口号
-                Message.obtain(handler, 0, "正在发送至" + ipAddress + ":" +  port).sendToTarget();//sendToTarget方法,把这条消息发到被getTarget()指定的handler, obtain设置目标值和对象成员,生成这条消息
-                process.incrementProgressBy(20);
-                Thread sendThread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        socketManager.SendFile(fileName, safeFileName, ipAddress0, port0);//sendFile方法
-                    }
-                });
-                sendThread.start();
-            }
+        if (resultCode == 6 && requestCode == 1) {  //发送按键transfer
+            final ArrayList<String> fileName = data.getStringArrayListExtra("fileName");//文件名
+            final ArrayList<String> safeFileName = data.getStringArrayListExtra("safeFileName");
+            final String ipAddress0 = ipAddress;//ip地址
+            final int port0 = port;//端口号
+            Message.obtain(handler, 0, "正在发送至" + ipAddress + ":" + port).sendToTarget();//sendToTarget方法,把这条消息发到被getTarget()指定的handler, obtain设置目标值和对象成员,生成这条消息
+            process.incrementProgressBy(20);
+            Thread sendThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    socketManager.SendFile(fileName, safeFileName, ipAddress0, port0);//sendFile方法
+                }
+            });
+            sendThread.start();
+        }
+    }
 
         //下面是显示二维码的对话框
-//    private void showAlertDialog() {
-//
-//        final AlertDialog dlg = new AlertDialog.Builder(this).create();
-//        dlg.show();
-//        Window window = dlg.getWindow();
-//        // *** 主要就是在这里实现这种效果的.
-//        // 设置窗口的内容页面,alertdialog.xml文件中定义view内容
-//        window.setContentView(R.layout.qrdialog);
-//        // 为确认按钮添加事件,执行退出应用操作
-//        ImageView wifiImage = (ImageView) findViewById(R.id.wifiImage);
-//        if(!wifiHotspot.isWifiApEnabled()) {
-//            wifiSSID = String.valueOf(Math.random()).substring(2, 2 + 8);
-//            wifiPwd = String.valueOf(Math.random()).substring(2, 2 + 8);
-//            String transport = wifiSSID + "\n" + wifiPwd;
-//            wifiHotspot.startWifiAp(wifiSSID, wifiPwd);
-//            Bitmap qrCodeBitmap = EncodingUtils.createQRCode(transport, 250, 250, null);
-//            wifiImage.setImageBitmap(qrCodeBitmap);
-//        }
-//
-//
-//      //  Log.i("hhh",qrCodeBitmap.toString().trim());
-//        Button tv_queding = (Button) window.findViewById(R.id.tv_content1);
-//        tv_queding.setText("  确 定   ");
-//        tv_queding.setOnClickListener(new View.OnClickListener() {
-//            @SuppressLint("SdCardPath")
-//            public void onClick(View v) {
-//
-//                dlg.cancel();
-//            }
-//        });
-//        dlg.setCancelable(false);
-//    }
+    private void showAlertDialog(Bitmap bitmap) {
+        Log.i("hhh",qrCodeBitmap.toString().trim());
+
+        final AlertDialog dlg = new AlertDialog.Builder(this).create();
+        dlg.show();
+        Window window = dlg.getWindow();
+        // *** 主要就是在这里实现这种效果的.
+        // 设置窗口的内容页面,alertdialog.xml文件中定义view内容
+        window.setContentView(R.layout.qrdialog);
+        // 为确认按钮添加事件,执行退出应用操作
+        ImageView wifiImage = (ImageView) window.findViewById(R.id.wifiImg);//注意这里一定要加window.findViewById
+        Log.i("hhh",wifiImage.toString().trim());
+        wifiImage.setImageBitmap(bitmap);
+
+        Button tv_queding = (Button) window.findViewById(R.id.tv_content1);
+        tv_queding.setText("  确 定   ");
+        tv_queding.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SdCardPath")
+            public void onClick(View v) {
+
+                dlg.cancel();
+            }
+        });
+        dlg.setCancelable(false);
     }
+
+
     public String GetIpAddress() {   //获取连接到的wifi分配给手机的ip地址
         WifiManager wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
         WifiInfo wifiInfo = wifiManager.getConnectionInfo();
