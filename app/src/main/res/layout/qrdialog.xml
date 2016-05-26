@@ -17,7 +17,8 @@
 
         <!-- 最上面的提示图片 -->
         <ImageView
-            android:id="@+id/wifiImage"
+
+            android:id="@+id/wifiImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
