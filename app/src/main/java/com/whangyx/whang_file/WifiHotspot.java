@@ -19,7 +19,7 @@ public class WifiHotspot {
     private WifiManager wifiManager = null;
     private Context context = null;
     private WifiInfo wifiInfo;        //wifi当前状态
-    WifiConfiguration netConfig;
+    public WifiConfiguration netConfig;
 
     public WifiHotspot(Context context) {
         this.context = context;
