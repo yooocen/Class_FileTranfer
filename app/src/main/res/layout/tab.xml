@@ -81,7 +81,7 @@
                     <EditText
                         android:background="@drawable/while_backgroud"
                         android:editable="false"
-                        android:text="呦呦呦"
+                        android:text="发送和接收过程信息显示"
                         android:ems="100"
                         android:id="@+id/info"
                         android:layout_marginTop="40dp"
@@ -100,6 +100,15 @@
                         android:layout_gravity="center"
                         android:id="@+id/transfer"
                         android:text="开始传送"/>
+
+                    <TextView
+                        android:layout_above="@id/transfer"
+                        android:id="@+id/recTips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提示:   当前与电脑的连接是断开的"/>
+
+
                 </RelativeLayout>
 
             </LinearLayout>

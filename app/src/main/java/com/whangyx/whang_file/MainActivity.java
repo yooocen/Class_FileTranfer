@@ -29,6 +29,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TabHost;
 import android.widget.TabWidget;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.common.StringUtils;
@@ -70,6 +71,16 @@ public class MainActivity extends Activity {
     private Button open,close,connect;
     private ImageView wifiImage;
     private String[] splitResult;
+    //传电脑用
+    private int tcpPort = 23333;
+    private String LastName;
+    private ReceiveFile receiveFile;//自己写的一个类
+    private TcpConnect tcpConnect;//自己写的一个类
+    private UdpBroadcast broadcastIp;//自己写的一个类
+    private TextView recTips;
+    private SendFile sendFile;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +97,11 @@ public class MainActivity extends Activity {
                 R.id.LinearLayout001).setIndicator("传输"));
         mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(
                 R.id.LinearLayout002).setIndicator("管理"));
+
+        //下面这句话是提示跟电脑是否已经连接成功
+
+        recTips = (TextView) findViewById(R.id.recTips);//"正在等待电脑端连接"
+
 
         //*********************************************以下是文件传输的:********************************************
         info = (EditText) findViewById(R.id.info);//获取传输时的信息
@@ -109,6 +125,19 @@ public class MainActivity extends Activity {
                         break;
                     case 2:
                         Toast.makeText(getApplicationContext(), msg.obj.toString(), Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3://与电脑通信使用
+                        String message_obj = (String) msg.obj;
+                        if (LastName == message_obj) {
+                            if (LastName == null) {
+                                recTips.setText("提示:    已经和电脑连接成功");
+                            } else {
+                                recTips.setText("提示:    所有文件接收成功！");
+                            }
+                        } else {
+                            recTips.setText("提示:    文件" + message_obj + "正在接收...");
+                            LastName = message_obj;
+                        }
                         break;
                 }
             }
@@ -219,6 +248,64 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+        //************************************下面是连接电脑的******************************************************
+        broadcastIp = new UdpBroadcast();
+        broadcastIp.start();//开始广播ip地址
+
+        tcpConnect = new TcpConnect();
+        new Thread() {
+
+            boolean flag = true;
+
+            @Override
+            public void run() {
+                while (flag) {
+                    if (tcpConnect.connect(tcpPort)) {
+                        broadcastIp.stop();// tcp连接成功后udp广播停止
+                        flag = false;
+
+                        receiveFile.setSocket(tcpConnect.getSocket());//在这里接收!!!!!!!!
+                        sendFile.setSocket(tcpConnect.getSocket());
+                        if (receiveFile.start()) {//start()->receive()->makeDir()
+
+                            String fileName = receiveFile.getFileName();
+                            if(fileName!=null) {
+                            Log.i("tag",fileName);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }.start();
+        receiveFile = new ReceiveFile();
+        sendFile = new SendFile();
+
+        new Thread() {//
+            boolean flag = true;
+
+            @Override
+            public void run() {
+                while (!Thread.currentThread().isInterrupted()) {//如果当前这个线程没有中断
+
+                    String str_temp = receiveFile.getFileName();//初始值是null
+                    boolean isConnected = tcpConnect.isConnected();
+                    if(isConnected)
+                    {
+                        Message.obtain(handler,3,str_temp).sendToTarget();//.obtain()返回一个新的消息实例
+                        //Message.what = 3
+                        //传给hander
+                        //Message.obj=str_temp
+                    }
+
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
+            }
+        }.start();
 
     }
 
@@ -248,25 +335,33 @@ public class MainActivity extends Activity {
                 connectToWifi.openWifi();
 
                 connectToWifi.addNetwork(connectToWifi.CreateWifiInfo(wifiSSID, wifiPwd, 3));
-                Log.i("tag", "呦呦呦!");
+                Log.i("tag", "发送和接收过程信息显示:");
             }
 
         }
-        //点击发送按钮之后的反馈
+        //点击发送按钮之后的反馈,手机和手机之间的传输文件
         if (resultCode == 6 && requestCode == 1) {  //发送按键transfer
             final ArrayList<String> fileName = data.getStringArrayListExtra("fileName");//文件名
             final ArrayList<String> safeFileName = data.getStringArrayListExtra("safeFileName");
             final String ipAddress0 = ipAddress;//ip地址
             final int port0 = port;//端口号
-            Message.obtain(handler, 0, "正在发送至" + ipAddress + ":" + port).sendToTarget();//sendToTarget方法,把这条消息发到被getTarget()指定的handler, obtain设置目标值和对象成员,生成这条消息
-            process.incrementProgressBy(20);
-            Thread sendThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    socketManager.SendFile(fileName, safeFileName, ipAddress0, port0);//sendFile方法
-                }
-            });
-            sendThread.start();
+            if((recTips.getText()+"").contains("已经和电脑连接成功")) {
+                String filePath = safeFileName.get(0);
+                Log.i("tag",filePath);
+//                Toast.makeText(this, filePath, Toast.LENGTH_SHORT).show();
+                sendFile.start(filePath);
+            }
+            else{
+                Message.obtain(handler, 0, "正在发送至" + ipAddress + ":" + port).sendToTarget();//sendToTarget方法,把这条消息发到被getTarget()指定的handler, obtain设置目标值和对象成员,生成这条消息
+                process.incrementProgressBy(20);
+                Thread sendThread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        socketManager.SendFile(fileName, safeFileName, ipAddress0, port0);//sendFile方法
+                    }
+                });
+                sendThread.start();
+            }
         }
     }
 

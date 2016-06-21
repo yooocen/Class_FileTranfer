@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
+        jar="/home/chen/AndroidStudioProjects/backup/file_demo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="10a7ab379e66ee0eca1538171da31faed0a8b876">
+        <dex dex="/home/chen/AndroidStudioProjects/backup/file_demo/app/build/intermediates/pre-dexed/debug/instant-run_6518823d0fa2444316472b330edd3ea819b88306.jar" />
+    </item>
+    <item
         jar="/home/chen/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
         jumboMode="true"
         revision="23.0.3"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_e993b0a0cae5086cfb23652f48cda69e8980cd2a/classes.dex" />
+        <dex dex="/home/chen/AndroidStudioProjects/backup/file_demo/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0_e993b0a0cae5086cfb23652f48cda69e8980cd2a.jar" />
     </item>
     <item
-        jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/jars/libs/zxing.jar"
+        jar="/home/chen/AndroidStudioProjects/backup/file_demo/app/build/intermediates/exploded-aar/file_demo/libzxing/unspecified/jars/libs/zxing.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="18b9a0122479e5439280d728c43216d9e85f2d9d">
-        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/8/zxing_bb016dceb0d416178c5f3e130ae66d2bf34baab7/classes.dex" />
+        sha1="e7283f2e69a90a2940727f561aa14f872b389d3d">
+        <dex dex="/home/chen/AndroidStudioProjects/backup/file_demo/app/build/intermediates/pre-dexed/debug/zxing_541a896caf24ae2f57bb3ce1d7a51a40dbfad7f7.jar" />
     </item>
     <item
-        jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/chen/AndroidStudioProjects/backup/file_demo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="867a3228263507900f7aa7267ca781139f0899d6">
-        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_13a1ec1949a914a545cdd08880ad5bb33da442b4/classes.dex" />
-    </item>
-    <item
-        jar="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="580225b6b21da7547a1a68c34999c9fa0a14254f">
-        <dex dex="/home/chen/AndroidStudioProjects/file_demo/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_35e1d1b0aae5b8e356d380fcc7e4e84df7167171/classes.dex" />
+        sha1="b66556e261afeaa12bb24e84edb5a3d7dc2db677">
+        <dex dex="/home/chen/AndroidStudioProjects/backup/file_demo/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_7d7dcc3e43edadd2890aee02fb8adca08c8af921.jar" />
     </item>
 
 </items>

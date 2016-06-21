@@ -27,10 +27,10 @@ public class SocketManager {
         int port = 9999;
         while(port > 9000){
             try {
-                server = new ServerSocket(port);//这样的话就有999种可能的ServerSocket对象
+                server = new ServerSocket(port);
                 break;
             } catch (Exception e) {
-                port--;
+                port--;//假设上一个port不行的话,则减一再试一下
             }
         }
         SendMessage(1, port);//发送文件
